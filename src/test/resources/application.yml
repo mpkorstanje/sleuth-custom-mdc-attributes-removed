@@ -1,0 +1,19 @@
+com:
+  example:
+    demo-url: http://localhost:${wiremock.server.port}
+
+spring:
+  sleuth:
+    propagation-keys:
+      - user-id
+    log:
+      slf4j:
+        enabled: true
+        whitelisted-mdc-keys:
+          - user-id
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://jaeger-collector.kube-system:9411/
+    enabled: true
+
