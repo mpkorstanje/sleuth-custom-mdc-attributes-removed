@@ -3,7 +3,6 @@ package com.example.demo.controller;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-@Component
 @ConfigurationProperties("com.example")
 public class Configuration {
 

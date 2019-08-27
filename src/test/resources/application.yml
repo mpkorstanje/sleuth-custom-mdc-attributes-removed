@@ -14,6 +14,5 @@ spring:
     sampler:
       probability: 1.0
   zipkin:
-    base-url: http://jaeger-collector.kube-system:9411/
     enabled: true
 
