@@ -4,15 +4,11 @@ com:
 
 spring:
   sleuth:
-    propagation-keys:
-      - user-id
-    log:
-      slf4j:
-        enabled: true
-        whitelisted-mdc-keys:
-          - user-id
     sampler:
       probability: 1.0
+    baggage:
+      remote-fields: user-id
+      correlation-fields: user-id
   zipkin:
     enabled: true
 
